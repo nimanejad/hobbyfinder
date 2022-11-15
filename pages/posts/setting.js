@@ -3,9 +3,8 @@ import Image from 'next/image'
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import Router from 'next/router'
-document.body.style.backgroundImage =
-"url('/sports.jpg')";
-export default function Music() {   
+
+export default function Hobbies() {   
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -122,7 +121,8 @@ export default function Music() {
       ) : (
         /* 5. Question Card  */
         <main className={styles.main}>
-         <div className={styles.grid}>
+        <div className={styles.lifestyleBackgroundImg}>
+        <div className={styles.grid}>
           {/* Current Question  */}
           <h2>
             Question: {currentQuestion + 1} out of {questions.length}&nbsp;
@@ -141,6 +141,7 @@ export default function Music() {
                 </a>
               );
             })}
+        </div>
         </div>
         </main>
       )}

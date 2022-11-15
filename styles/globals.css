@@ -21,9 +21,11 @@ a {
     color-scheme: dark;
   }
   body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(0, 200, 255);
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2.0px 2.0px 0px rgba(0, 0, 0, 0.865);
+    -webkit-text-stroke: .2px rgb(255, 255, 255);
     background: rgb(176, 184, 201);
   }
 }

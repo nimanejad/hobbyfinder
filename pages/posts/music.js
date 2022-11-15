@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import Router from 'next/router'
 import { COOKIE_NAME_PRERENDER_BYPASS } from "next/dist/server/api-utils";
-document.body.style.backgroundImage =
-"url('/culture.jpg')";
-export default function Music() {
+
+export default function Hobbies() {
     
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);

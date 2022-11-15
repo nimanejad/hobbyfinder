@@ -3,9 +3,8 @@ import Image from 'next/image'
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import Router from 'next/router'
-document.body.style.backgroundImage =
-"url('/arts-and-crafts.jpeg')";
-export default function Music() {   
+
+export default function Hobbies() {   
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
