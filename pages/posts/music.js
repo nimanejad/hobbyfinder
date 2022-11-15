@@ -6,96 +6,53 @@ export default function Music() {
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
+  var str = "";
+  //const [str, setStr] = useState(0);
 
   const questions = [
     {
-      text: "Are you skilled at playing any sports?",
+      text: "Are you a visual person?",
       options: [
-        { Answer: 0, text: "Agree", isCorrect: true},
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
-        { Answer: 3, text: "Disagree", isCorrect: false},
+        { Answer: 0, text: "Strongly Agree", isCorrect: true },
+        { Answer: 1, text: "Somewhat Agree", isCorrect: true },
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
+        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
       ],
     },
     {
-      text: "You like to exercise in the snow?",
+      text: "Are you a creative person?",
       options: [
-        { Answer: 0, text: "Agree", isCorrect: true},
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
-        { Answer: 3, text: "Disagree", isCorrect: false},
+        { Answer: 0, text: "Strongly Agree", isCorrect: false },
+        { Answer: 1, text: "Somewhat Agree", isCorrect: false },
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: true},
+        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
       ],
     },
     {
-      text: "You like to exercise more with your hands?",
+      text: "How much time are you willing to commit to this hobby?",
       options: [
-        { Answer: 0, text: "Agree", isCorrect: true},
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
-        { Answer: 3, text: "Disagree", isCorrect: false},
+        { Answer: 0, text: "Strongly Agree", isCorrect: false },
+        { Answer: 1, text: "Somewhat Agree", isCorrect: false },
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: true},
+        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
       ],
     },
     {
-      text: "You like to exercise more with your feet?",
+      text: "How much money are you willing to spend on this hobby?",
       options: [
-        { Answer: 0, text: "Agree", isCorrect: true},
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
-        { Answer: 3, text: "Disagree", isCorrect: false},
+        { Answer: 0, text: "Strongly Agree", isCorrect: false },
+        { Answer: 1, text: "Somewhat Agree", isCorrect: false },
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: true},
+        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
       ],
     },
     {
-      text: "You like to exercise water-related sports?",
+      text: "Do you prefer to do a hobby that is more 'You Time' or a hobby that helps others?",
       options: [
-        { Answer: 0, text: "Agree", isCorrect: true},
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
-        { Answer: 3, text: "Disagree", isCorrect: false},
-      ],
-    },
-    {
-      text: "You like to use equipment instead of your body when you exercise?",
-      options: [
-        { Answer: 0, text: "Agree", isCorrect: true},
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
-        { Answer: 3, text: "Disagree", isCorrect: false},
-      ],
-    },
-    {
-      text: "Which of the following describes playing a poece of music alone?",
-      options: [
-        { Answer: 0, text: "Duet", isCorrect: false },
-        { Answer: 1, text: "Solo", isCorrect: true},
-        { Answer: 2, text: "Symphony", isCorrect: false },
-        { Answer: 3, text: "Quartet", isCorrect: false },
-      ],
-    },
-    {
-      text:"In an Orchestra who directs the musicians?" ,
-      options: [
-        { Answer: 0, text: "The Conductor", isCorrect: true },
-        { Answer: 1, text: "The Manager", isCorrect: false },
-        { Answer: 2, text: "The Main Musician", isCorrect: false },
-        { Answer: 3, text: "The Best Musician", isCorrect: false },
-      ],
-    },
-    {
-      text: "How many musicians are in a duet?",
-      options: [
-        { Answer: 0, text: "One", isCorrect: false },
-        { Answer: 1, text: "Two", isCorrect: true },
-        { Answer: 2, text: "Three", isCorrect: false },
-        { Answer: 3, text: "Four", isCorrect: false },
-      ],
-    },
-    {
-      text: "Which member of an orchestra holds a baton?",
-      options: [
-        { Answer: 0, text: "Percussionist", isCorrect: false },
-        { Answer: 1, text: "Conductor", isCorrect: true },
-        { Answer: 2, text: "French Horn Player", isCorrect: false },
-        { Answer: 3, text: "Violinist", isCorrect: false },
+        { Answer: 0, text: "Strongly Agree", isCorrect: false },
+        { Answer: 1, text: "Somewhat Agree", isCorrect: false },
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: true},
+        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
       ],
     },
   ];
@@ -108,8 +65,23 @@ export default function Music() {
 
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
-    } else {
+    } 
+    else {
+      let str;
+      if(score == 5){
+        str = "Based on the score{score}.The hobbies recommended would be Photogtaphy and Music Production.";
+      }
+      else if(score == 4) {
+        str = "Based on the score {score}. The hobbies recommended would be Painting and Cooking.";
+      }
+      else if(score == 3) {
+        str = "Based on the score {score}. The hobbies recommended would be Graffiti and Singing.";
+      } 
+      else{
+        str = "Based on the score {score} and below, we recommend you try hobbies in other fields.";
+      }
       setShowResults(true);
+    
     }
   };
 
@@ -119,19 +91,21 @@ export default function Music() {
     setCurrentQuestion(0);
     setShowResults(false);
   };
-  
+
   return (
     <div className="App">
       {/* 1. Header  */}
       <h1 className={styles.title}>
-      Sports Questions
+      MusicQuestions
       </h1>
       {/* 3. Show results or show the question game  */}
       {showResults ? (
+        
         /* 4. Final Results */
         <div className="final-results">
-          <h1>Your Results</h1>
+          <h1>Final Results</h1>
           <h2>
+            {str}
             {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%)
           </h2>
@@ -165,4 +139,3 @@ export default function Music() {
     </div>
   );
 }
-
