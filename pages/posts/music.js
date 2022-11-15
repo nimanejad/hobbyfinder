@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 
@@ -10,57 +9,57 @@ export default function Music() {
 
   const questions = [
     {
-      text: "Which percussion instrument is named after its shape?",
+      text: "Are you skilled at playing any sports?",
       options: [
-        { Answer: 0, text: "Circle", isCorrect: false },
-        { Answer: 1, text: "Square", isCorrect: false },
-        { Answer: 2, text: "Triangle", isCorrect: true},
-        { Answer: 3, text: "Hexagon", isCorrect: false },
+        { Answer: 0, text: "Agree", isCorrect: true},
+        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
+        { Answer: 3, text: "Disagree", isCorrect: false},
       ],
     },
     {
-      text: "The flute is a member of the ___.",
+      text: "You like to exercise in the snow?",
       options: [
-        { Answer: 0, text: "Brass Family", isCorrect: false },
-        { Answer: 1, text: "Woodwind Family", isCorrect: true},
-        { Answer: 2, text: "Percussion Family", isCorrect: false },
-        { Answer: 3, text: "String Family", isCorrect: false },
+        { Answer: 0, text: "Agree", isCorrect: true},
+        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
+        { Answer: 3, text: "Disagree", isCorrect: false},
       ],
     },
     {
-      text: "Which of these instruments belongs in the string family?",
+      text: "You like to exercise more with your hands?",
       options: [
-        { Answer: 0, text: "Cello", isCorrect: true },
-        { Answer: 1, text: "Oboe", isCorrect: false },
-        { Answer: 2, text: "Piccolo", isCorrect: false },
-        { Answer: 3, text: "Tambourine", isCorrect: false },
+        { Answer: 0, text: "Agree", isCorrect: true},
+        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
+        { Answer: 3, text: "Disagree", isCorrect: false},
       ],
     },
     {
-      text: "Mozart, Beethoven and Bach were all famous...",
+      text: "You like to exercise more with your feet?",
       options: [
-        { Answer: 0, text: "Kings", isCorrect: false },
-        { Answer: 1, text: "Composers", isCorrect: true },
-        { Answer: 2, text: "Knights", isCorrect: false },
-        { Answer: 3, text: "Magicians", isCorrect: false },
+        { Answer: 0, text: "Agree", isCorrect: true},
+        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
+        { Answer: 3, text: "Disagree", isCorrect: false},
       ],
     },
     {
-      text: "A huge band from the 1960s was called The Rolling...",
+      text: "You like to exercise water-related sports?",
       options: [
-        { Answer: 0, text: "Wheels", isCorrect: false },
-        { Answer: 1, text: "Stones", isCorrect: true },
-        { Answer: 2, text: "Pins", isCorrect: false },
-        { Answer: 3, text: "Wagons", isCorrect: false },
+        { Answer: 0, text: "Agree", isCorrect: true},
+        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
+        { Answer: 3, text: "Disagree", isCorrect: false},
       ],
     },
     {
-      text: "Which of these instruments does not have strings?",
+      text: "You like to use equipment instead of your body when you exercise?",
       options: [
-        { Answer: 0, text: "Piano", isCorrect: false },
-        { Answer: 1, text: "Brass Guitar", isCorrect: false },
-        { Answer: 2, text: "Drums", isCorrect: true},
-        { Answer: 3, text: "Harp", isCorrect: false },
+        { Answer: 0, text: "Agree", isCorrect: true},
+        { Answer: 1, text: "Somewhat Agree", isCorrect: true},
+        { Answer: 2, text: "Somewhat Disagree", isCorrect: false},
+        { Answer: 3, text: "Disagree", isCorrect: false},
       ],
     },
     {
@@ -120,18 +119,18 @@ export default function Music() {
     setCurrentQuestion(0);
     setShowResults(false);
   };
-
+  
   return (
     <div className="App">
       {/* 1. Header  */}
       <h1 className={styles.title}>
-      MusicQuestions
+      Sports Questions
       </h1>
       {/* 3. Show results or show the question game  */}
       {showResults ? (
         /* 4. Final Results */
         <div className="final-results">
-          <h1>Final Results</h1>
+          <h1>Your Results</h1>
           <h2>
             {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%)

@@ -9,14 +9,14 @@ export default function Settings() {
   const [name,setName] = useState('_______')
 
   const handleClick = () => {
-    setName("Tuffy")
+    setName("Hobbies")
   }
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Titan Quiz Bowl</title>
-        <link rel="icon" href="/tuffyimage.png" />
+        <title>HobbyFinder</title>
+        <link rel="icon" href="/hobbies-icon.png" />
       </Head>
 
       <main className={styles.main}>
@@ -39,16 +39,12 @@ export default function Settings() {
               <h2>Home Screen</h2> 
             </div> 
            </a>
-
         </div>
-
-
-
       </main> 
 
       <footer className={styles.footer}>
         <a>
-          Titan Quiz Bowl 2022
+          HobbyFinder 2022
         </a>
       </footer>
     </div>
