@@ -21,8 +21,9 @@ a {
     color-scheme: dark;
   }
   body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 200, 255);
-    -webkit-text-stroke: 3px rgb(86, 69, 69);
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
     background: rgb(176, 184, 201);
   }
 }

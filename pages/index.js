@@ -19,7 +19,7 @@ export default function Home() {
         &nbsp;
         <div className={styles.grid}>
           <Link href="/posts/music" > 
-            <a className={styles.card}> <h2>Sports</h2> </a>
+            <a className={styles.card}> <h2>Cultural/Educational</h2> </a>
           </Link>
   
           <Link href="/posts/geography" >
@@ -27,15 +27,15 @@ export default function Home() {
           </Link>
 
           <Link href="/posts/history" >
-          <a className={styles.card}> <h2>Cooking</h2> </a>
+          <a className={styles.card}> <h2>Social/Community</h2> </a>
           </Link>
 
           <Link href="/posts/general" >
-          <a className={styles.card}> <h2>General</h2> </a>
+          <a className={styles.card}> <h2>Lifestyle</h2> </a>
           </Link>
 
           <Link href="/posts/setting" >
-          <a className={styles.card}> <h2>Settings</h2> </a>
+          <a className={styles.card}> <h2>Sports</h2> </a>
           </Link>
             
         </div>

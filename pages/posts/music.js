@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import Router from 'next/router'
-import MiddlewarePlugin from "next/dist/build/webpack/plugins/middleware-plugin";
-
+import { COOKIE_NAME_PRERENDER_BYPASS } from "next/dist/server/api-utils";
+document.body.style.backgroundImage =
+"url('/culture.jpg')";
 export default function Music() {
     
   const [showResults, setShowResults] = useState(false);
@@ -83,7 +84,7 @@ export default function Music() {
     <div className="App">
       {/* 1. Header  */}
       <h1 className={styles.title}>
-      Sports Questions
+      Cultural/Educational Questions
       </h1>
       {/* 3. Show results or show the question game  */}
       {showResults ? (
@@ -125,7 +126,7 @@ export default function Music() {
          <div className={styles.grid}>
           {/* Current Question  */}
           <h2>
-            Question: {currentQuestion + 1} out of {questions.length}
+            Question: {currentQuestion + 1} out of {questions.length}&nbsp;
           </h2>
           <h2>{questions[currentQuestion].text}</h2>
 

@@ -2,14 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
-
-export default function Music() {
-    
+import Router from 'next/router'
+document.body.style.backgroundImage =
+"url('/arts-and-crafts.jpeg')";
+export default function Music() {   
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [str, setStr] = useState("");
-
   const questions = [
     {
       text: "Are you willing to spend a lot of money on the hobby?",
@@ -83,7 +83,7 @@ export default function Music() {
     <div className="App">
       {/* 1. Header  */}
       <h1 className={styles.title}>
-      MusicQuestions
+      Arts & Crafts Questions
       </h1>
       {/* 3. Show results or show the question game  */}
       {showResults ? (
@@ -104,15 +104,28 @@ export default function Music() {
             {/* {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%) */}
           </h2>
-          <button onClick={() => restartGame()}>Restart game</button>
-        </div>
+          <div className={styles.grid}>
+          {/* Restart Questionnaire */}
+          <a className={styles.card}>
+          <div onClick={() => restartGame()}>
+            <h2>Restart Questionnaire</h2>
+          </div>
+          </a>
+            {/* Back to home screen*/}
+            <a className={styles.card}> 
+            <div onClick={() => Router.back()}> 
+            <h2>Home Screen</h2> 
+            </div> 
+           </a>
+          </div>
+          </div>
       ) : (
         /* 5. Question Card  */
         <main className={styles.main}>
          <div className={styles.grid}>
           {/* Current Question  */}
           <h2>
-            Question: {currentQuestion + 1} out of {questions.length}
+            Question: {currentQuestion + 1} out of {questions.length}&nbsp;
           </h2>
           <h2>{questions[currentQuestion].text}</h2>
 
