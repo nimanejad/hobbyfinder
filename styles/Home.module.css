@@ -46,7 +46,7 @@
 }
 
 .lifestyleBackgroundImg {
-  background-image: url("/../../../../lifestyle.jpg");
+  background-image: url("/../../../../lifestyle.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -55,8 +55,16 @@
 .sportsBackgroundImg {
   background-image: url("/../../../../sports.png");
   background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.resultsBackgroundImg {
+  background-image: url("/../../../../celebration.png");
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+
 }
 
 .footer {

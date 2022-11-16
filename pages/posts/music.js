@@ -90,6 +90,7 @@ export default function Hobbies() {
         
         /* 4. Final Results */
         <div className="final-results">
+        <div className={styles.resultsBackgroundImg}>
           <h1>Final Results</h1>
           <h2>
              {/* Based on the score {score}.  */}
@@ -119,10 +120,12 @@ export default function Hobbies() {
            </a>
           </div>
           </div>
+          </div>
       ) : (
         /* 5. Question Card  */
         <main className={styles.main}>
-         <div className={styles.grid}>
+        <div className={styles.cultureBackgroundImg}>
+        <div className={styles.grid}>
           {/* Current Question  */}
           <h2>
             Question: {currentQuestion + 1} out of {questions.length}&nbsp;
@@ -141,6 +144,7 @@ export default function Hobbies() {
                 </a>
               );
             })}
+        </div>
         </div>
         </main>
       )}
