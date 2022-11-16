@@ -1,8 +1,8 @@
-Name of file: README.md
-Group Member Names: Nima Nejad, Kingston Leung, Jesus Arroyo
-Contact Email: nimanejad@csu.fullerton.edu, leungkingston@gmail.com, jarroyo013@csu.fullerton.edu
-Date last updated: 11/15/22
-Purpose: README File (instructions for running program)
+Name of file: README.md<br>
+Group Member Names: Nima Nejad, Kingston Leung, Jesus Arroyo<br>
+Contact Email: nimanejad@csu.fullerton.edu, leungkingston@gmail.com, jarroyo013@csu.fullerton.edu<br>
+Date last updated: 11/15/22<br>
+Purpose: README File (instructions for running program)<br>
 License: MIT License
 
 Steps to run the program (HobbyFinder):
@@ -23,6 +23,9 @@ Steps to run the program (HobbyFinder):
 
 
 
+
+
+Additional Notes:
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
