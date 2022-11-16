@@ -8,7 +8,7 @@ License: MIT License
 Steps to run the program (HobbyFinder):
 1. Download project from GitHub by clicking the green 'Code' button and then clicking 'Download Zip'
 2. Unzip the file to a location on your local hard drive
-2. Install node.js from node.js website
+2. Install node.js from node.js website (https://nodejs.org/en/)
 3. Install Git Bash terminal (Link to download: https://git-scm.com/downloads)
 4. Choose Download option based on your current OS (i.e. macOS, Windows, Linux/Unix)
 5. For Windows users, click the 'Windows' link and select '64-bit Git for Windows Portable' option. For Linux/Unix users follow the commands provided on the 'Download for Linux and Unix' page once you have clicked the link labeled 'Linux/Unix')
