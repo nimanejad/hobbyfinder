@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import Router from 'next/router'
@@ -11,7 +9,7 @@ export default function Hobbies() {
   const [str, setStr] = useState("");
   const questions = [
     {
-      text: "Do you enjoy walking a lot?",
+      text: "Are you willing to spend a lot of money on the hobby?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -20,7 +18,7 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Would you consider yourself a people person?",
+      text: "Do you mind getting yourself or your clothing messy?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -29,7 +27,7 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Would you say you are a natural born leader/teacher?",
+      text: "Would you consider yourself a patient person?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -38,7 +36,7 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Do you speak more than one language?",
+      text: "Do you mind taking on a hobby that is time consuming?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -47,12 +45,12 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Do you prefer to do a hobby that is more 'You Time' or a hobby that helps others?",
+      text: "Do you have any past experiences with art?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true },
+        { Answer: 1, text: "Somewhat Agree", isCorrect: false },
         { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
-        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
+        { Answer: 3, text: "Strongly Disagree", isCorrect: true },
       ],
     },
   ];
@@ -82,24 +80,24 @@ export default function Hobbies() {
     <div className="App">
       {/* 1. Header  */}
       <h1 className={styles.title}>
-      Social/Community Questions
+      Arts & Crafts Questions
       </h1>
       {/* 3. Show results or show the question game  */}
       {showResults ? (
         
         /* 4. Final Results */
         <div className="final-results">
-        <div className={styles.resultsBackgroundImg}>
+          <div className={styles.resultsBackgroundImg}>
           <h1>Final Results</h1>
           <h2>
              {/* Based on the score {score}.  */}
              Based on your answers, 
-            {(score === 0) && <> the hobby recommended would be none in thoise field.</>} 
-            {(score === 1) && <> the hobby recommended would be Bycicle Tour Guide .</>} 
-            {(score === 2) && <> the hobby recommended would be Translator.</>} 
-            {(score === 3) && <> the hobby recommended would be Foriegn Language Teacher.</>} 
-            {(score === 4) && <> the hobby recommended would be Museum Tour Guide.</>} 
-            {(score === 5) && <> the hobby recommended would be Tourist Guide.</>} 
+            {(score === 0) && <> the hobby recommended would be Whale Watching.</>} 
+            {(score === 1) && <> the hobby recommended would be Singing.</>} 
+            {(score === 2) && <> the hobby recommended would be Music Production.</>} 
+            {(score === 3) && <> the hobby recommended would be Photography.</>} 
+            {(score === 4) && <> the hobby recommended would be Cake Maker.</>} 
+            {(score === 5) && <> the hobby recommended would be Painting.</>} 
             <br/>
             {/* {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%) */}
@@ -123,7 +121,7 @@ export default function Hobbies() {
       ) : (
         /* 5. Question Card  */
         <main className={styles.main}>
-        <div className={styles.communityBackgroundImg}>
+        <div className={styles.artscraftsBackgroundImg}>
         <div className={styles.grid}>
           {/* Current Question  */}
           <h2>

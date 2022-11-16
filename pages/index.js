@@ -16,24 +16,26 @@ export default function Home() {
           Welcome to HobbyFinder&nbsp;
         </h1>
         &nbsp;
+        <h2>Please select a hobby<br></br>
+          you would like to explore.</h2>
         <div className={styles.grid}>
-          <Link href="/posts/music" > 
-            <a className={styles.card}> <h2>Cultural/Educational</h2> </a>
+          <Link href="/posts/cultural" > 
+            <a className={styles.card}> <h2>Cultural</h2> </a>
           </Link>
   
-          <Link href="/posts/geography" >
+          <Link href="/posts/artsandcrafts" >
           <a className={styles.card}> <h2>Arts & Crafts</h2> </a>
           </Link>
 
-          <Link href="/posts/history" >
-          <a className={styles.card}> <h2>Social/Community</h2> </a>
+          <Link href="/posts/social" >
+          <a className={styles.card}> <h2>Social</h2> </a>
           </Link>
 
-          <Link href="/posts/general" >
+          <Link href="/posts/lifestyle" >
           <a className={styles.card}> <h2>Lifestyle</h2> </a>
           </Link>
 
-          <Link href="/posts/setting" >
+          <Link href="/posts/sports" >
           <a className={styles.card}> <h2>Sports</h2> </a>
           </Link>
         </div>

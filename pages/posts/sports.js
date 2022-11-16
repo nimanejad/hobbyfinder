@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import Router from 'next/router'
-import { COOKIE_NAME_PRERENDER_BYPASS } from "next/dist/server/api-utils";
 
 export default function Hobbies() {
-    
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [str, setStr] = useState("");
-
   const questions = [
     {
-      text: "Are you a visual person?",
+      text: "Are you comfortable playing outdoors?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -21,7 +18,7 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Are you a creative person?",
+      text: "Are you a good team player?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -30,7 +27,7 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "How much time are you willing to commit to this hobby?",
+      text: "Are you an athletic person?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -39,7 +36,7 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "How much money are you willing to spend on this hobby?",
+      text: "Would you consider yourself focused?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -48,7 +45,7 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Do you prefer to do a hobby that is more 'You Time' or a hobby that helps others?",
+      text: "You have good hand-eye coordination?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -83,24 +80,24 @@ export default function Hobbies() {
     <div className="App">
       {/* 1. Header  */}
       <h1 className={styles.title}>
-      Cultural/Educational Questions
+      Sports Questions
       </h1>
       {/* 3. Show results or show the question game  */}
       {showResults ? (
         
         /* 4. Final Results */
         <div className="final-results">
-        <div className={styles.resultsBackgroundImg}>
+          <div className={styles.resultsBackgroundImg}>
           <h1>Final Results</h1>
           <h2>
              {/* Based on the score {score}.  */}
              Based on your answers, 
-            {(score === 0) && <> the hobby recommended would be Babysitting.</>} 
-            {(score === 1) && <> the hobby recommended would be Volunteering.</>} 
-            {(score === 2) && <> the hobby recommended would be Gardening.</>} 
-            {(score === 3) && <> the hobby recommended would be building an Aquarium.</>} 
-            {(score === 4) && <> the hobby recommended would be Coding.</>} 
-            {(score === 5) && <> the hobby recommended would be Home Renovation.</>} 
+            {(score === 0) && <> the hobby recommended would be .</>} 
+            {(score === 1) && <> the hobby recommended would be Volleyball.</>} 
+            {(score === 2) && <> the hobby recommended would be Table Tennis.</>} 
+            {(score === 3) && <> the hobby recommended would be Basketball.</>} 
+            {(score === 4) && <> the hobby recommended would be Kickboxing.</>} 
+            {(score === 5) && <> the hobby recommended would be Soccer.</>} 
             <br/>
             {/* {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%) */}
@@ -124,7 +121,7 @@ export default function Hobbies() {
       ) : (
         /* 5. Question Card  */
         <main className={styles.main}>
-        <div className={styles.cultureBackgroundImg}>
+        <div className={styles.sportsBackgroundImg}>
         <div className={styles.grid}>
           {/* Current Question  */}
           <h2>

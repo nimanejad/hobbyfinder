@@ -1,17 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import Router from 'next/router'
 
-export default function Hobbies() {   
+export default function Hobbies() {
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [str, setStr] = useState("");
   const questions = [
     {
-      text: "Are you willing to spend a lot of money on the hobby?",
+      text: "Do you enjoy learning new things?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -20,39 +18,39 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Do you mind getting yourself or your clothing messy?",
+      text: "How many people would you like to socialize with while doing this hobby?",
+      options: [
+        { Answer: 0, text: "As many as possible", isCorrect: true },
+        { Answer: 1, text: "Around 8-10", isCorrect: true },
+        { Answer: 2, text: "Around 5-6", isCorrect: false },
+        { Answer: 3, text: "Only a couple of individuals", isCorrect: false },
+      ],
+    },
+    {
+      text: "How much time are you willing to commit to this hobby?",
+      options: [
+        { Answer: 0, text: "A vast amount of time each day", isCorrect: true },
+        { Answer: 1, text: "A decent amount of time each day", isCorrect: true },
+        { Answer: 2, text: "A bit of time each day", isCorrect: false },
+        { Answer: 3, text: "Almost no time each day", isCorrect: false },
+      ],
+    },
+    {
+      text: "How much money are you willing to spend on this hobby?",
+      options: [
+        { Answer: 0, text: "Money is no object", isCorrect: true },
+        { Answer: 1, text: "A decent amount of money", isCorrect: true },
+        { Answer: 2, text: "On a budget", isCorrect: false },
+        { Answer: 3, text: "Little to no money", isCorrect: false },
+      ],
+    },
+    {
+      text: "Would you consider yourself an open minded individual?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
         { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
         { Answer: 3, text: "Strongly Disagree", isCorrect: false },
-      ],
-    },
-    {
-      text: "Would you consider yourself a patient person?",
-      options: [
-        { Answer: 0, text: "Strongly Agree", isCorrect: true },
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true },
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
-        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
-      ],
-    },
-    {
-      text: "Do you mind taking on a hobby that is time consuming?",
-      options: [
-        { Answer: 0, text: "Strongly Agree", isCorrect: true },
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true },
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
-        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
-      ],
-    },
-    {
-      text: "Do you have any sort of natural talent in the Arts and Crafts?",
-      options: [
-        { Answer: 0, text: "Strongly Agree", isCorrect: true },
-        { Answer: 1, text: "Somewhat Agree", isCorrect: false },
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
-        { Answer: 3, text: "Strongly Disagree", isCorrect: true },
       ],
     },
   ];
@@ -82,24 +80,24 @@ export default function Hobbies() {
     <div className="App">
       {/* 1. Header  */}
       <h1 className={styles.title}>
-      Arts & Crafts Questions
+      Social Questions
       </h1>
       {/* 3. Show results or show the question game  */}
       {showResults ? (
         
         /* 4. Final Results */
         <div className="final-results">
-          <div className={styles.resultsBackgroundImg}>
+           <div className={styles.resultsBackgroundImg}>
           <h1>Final Results</h1>
           <h2>
              {/* Based on the score {score}.  */}
              Based on your answers, 
-            {(score === 0) && <> the hobby recommended would be not in this field.</>} 
-            {(score === 1) && <> the hobby recommended would be Cooking .</>} 
-            {(score === 2) && <> the hobby recommended would be Singing.</>} 
-            {(score === 3) && <> the hobby recommended would be Painting.</>} 
-            {(score === 4) && <> the hobby recommended would be Music Production.</>} 
-            {(score === 5) && <> the hobby recommended would be Photography.</>} 
+            {(score === 0) && <> the hobby recommended would be Bird Watching.</>} 
+            {(score === 1) && <> the hobby recommended would be Geocaching.</>} 
+            {(score === 2) && <> the hobby recommended would be joining a Band.</>} 
+            {(score === 3) && <> the hobby recommended would be attending a Woodworking Class.</>} 
+            {(score === 4) && <> the hobby recommended would be joining a book club.</>} 
+            {(score === 5) && <> the hobby recommended would be Wine Tasting.</>} 
             <br/>
             {/* {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%) */}
@@ -123,7 +121,7 @@ export default function Hobbies() {
       ) : (
         /* 5. Question Card  */
         <main className={styles.main}>
-        <div className={styles.artscraftsBackgroundImg}>
+        <div className={styles.communityBackgroundImg}>
         <div className={styles.grid}>
           {/* Current Question  */}
           <h2>

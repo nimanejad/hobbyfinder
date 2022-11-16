@@ -32,3 +32,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+Steps to run the program (HobbyFinder):
+1. Download project from GitHub by clicking the green 'Code' button and then clicking 'Download Zip'
+2. Unzip the file to a location on your local hard drive
+2. Install node.js from node.js website
+3. Install Git Bash terminal (Link to download: https://git-scm.com/downloads)
+4. Choose Download option based on your current OS (i.e. macOS, Windows, Linux/Unix)
+5. For Windows users, click the 'Windows' link and select '64-bit Git for Windows Portable' option. For Linux/Unix users follow the commands provided on the 'Download for Linux and Unix' page once you have clicked the link labeled 'Linux/Unix')
+6. Go through the setup wizard for Git Bash, making sure to not touch any options by clicking 'Next' until you reach 'Finish'
+7. Open Git Bash terminal once download has completed.
+7. Change directory (cd) into folder where you saved the project and press Enter.
+8. NOTE VERY IMPORTANT: Make sure to change any backslashes that will get copied from File Explorer in Windows to forward slashes. Follow example for reference: cd C:\Users\Documents\.\. gets changed to 'cd C:/Users/Documents/../..)
+8. Next, install following react.js dependency by typing the following command in the Git Bash terminal: 'npm install next'
+9. Once the next dependency is installed, run the following command in the Git Bash terminal: 'npm run dev'
+10. Copy the 'http://localhost:3000' URL provided in terminal once the connection is established and paste the URL in your favorite browser (preferrably Chrome)
+11. Application should now be loaded. Enjoy!

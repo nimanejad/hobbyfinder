@@ -1,17 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import Router from 'next/router'
 
-export default function Hobbies() {   
+export default function Hobbies() {
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [str, setStr] = useState("");
   const questions = [
     {
-      text: "Are you willing to spend a lot of money on the hobby?",
+      text: "Are you a visual person?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -20,7 +18,7 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Do you mind getting yourself or your clothing messy?",
+      text: "Are you a creative person?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
@@ -29,30 +27,30 @@ export default function Hobbies() {
       ],
     },
     {
-      text: "Would you consider yourself a patient person?",
+      text: "How much time are you willing to commit to this hobby?",
+      options: [
+        { Answer: 0, text: "A vast amount of time each day", isCorrect: true },
+        { Answer: 1, text: "A decent amount of time each day", isCorrect: true },
+        { Answer: 2, text: "A bit of time each day", isCorrect: false },
+        { Answer: 3, text: "Almost no time each day", isCorrect: false },
+      ],
+    },
+    {
+      text: "How much money are you willing to spend on this hobby?",
+      options: [
+        { Answer: 0, text: "Money is no object", isCorrect: true },
+        { Answer: 1, text: "A decent amount of money", isCorrect: true },
+        { Answer: 2, text: "On a budget", isCorrect: false },
+        { Answer: 3, text: "Little to no money", isCorrect: false },
+      ],
+    },
+    {
+      text: "Do you prefer to do a hobby you can do on your own?",
       options: [
         { Answer: 0, text: "Strongly Agree", isCorrect: true },
         { Answer: 1, text: "Somewhat Agree", isCorrect: true },
         { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
         { Answer: 3, text: "Strongly Disagree", isCorrect: false },
-      ],
-    },
-    {
-      text: "Do you mind taking on a hobby that is time consuming?",
-      options: [
-        { Answer: 0, text: "Strongly Agree", isCorrect: true },
-        { Answer: 1, text: "Somewhat Agree", isCorrect: true },
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
-        { Answer: 3, text: "Strongly Disagree", isCorrect: false },
-      ],
-    },
-    {
-      text: "Do you have any sort of natural talent in the Arts and Crafts?",
-      options: [
-        { Answer: 0, text: "Strongly Agree", isCorrect: true },
-        { Answer: 1, text: "Somewhat Agree", isCorrect: false },
-        { Answer: 2, text: "Somewhat Disagree", isCorrect: false },
-        { Answer: 3, text: "Strongly Disagree", isCorrect: true },
       ],
     },
   ];
@@ -94,12 +92,12 @@ export default function Hobbies() {
           <h2>
              {/* Based on the score {score}.  */}
              Based on your answers, 
-            {(score === 0) && <> the hobby recommended would be not in this field.</>} 
-            {(score === 1) && <> the hobby recommended would be Cooking .</>} 
-            {(score === 2) && <> the hobby recommended would be Singing.</>} 
-            {(score === 3) && <> the hobby recommended would be Painting.</>} 
-            {(score === 4) && <> the hobby recommended would be Music Production.</>} 
-            {(score === 5) && <> the hobby recommended would be Photography.</>} 
+            {(score === 0) && <> the hobby recommended would be Babysitting.</>} 
+            {(score === 1) && <> the hobby recommended would be Volunteering.</>} 
+            {(score === 2) && <> the hobby recommended would be Gardening.</>} 
+            {(score === 3) && <> the hobby recommended would be building an Aquarium.</>} 
+            {(score === 4) && <> the hobby recommended would be Coding.</>} 
+            {(score === 5) && <> the hobby recommended would be Home Renovation.</>} 
             <br/>
             {/* {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%) */}
